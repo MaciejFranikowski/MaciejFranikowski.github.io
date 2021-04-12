@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+    user-select: none;
+  }
+
+  ul li:nth-child(even) {
+    background: #c7bebe;
+  }
+  
+  ul li:hover {
+    background: rgb(138, 135, 135);
+  }
+
+  ul li.clicked {
+    text-decoration: line-through;
+    background: rgb(141, 140, 140);
+    color: #fff;
+    
+  }
+
+  ul li.clicked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
+
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+  }
+  
+  .close:hover {
+    background-color: #b16464;
+    color: white;
+  }
+
+  .header {
+    background-color: #b16464;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+  }
+  
+  .header:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 60%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+  }
+
+  .modal-text {
+    text-align: center;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 22px;
+  }
+
+  .addBtn {
+    padding: 10px;
+    width: 20%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0;
+  }
+
+  .undoBtn {
+    padding: 10px;
+    width: 20%;
+    background: #333232;
+    color: rgb(173, 172, 172);
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0;
+  }
+
+  .yesButton {
+    background-color: #d9d9d9;
+    border: none;
+    color: #555;
+    margin: 20px 20px 20px 20px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .noButton {
+    background-color: #333232;
+    border: none;
+    color: rgb(173, 172, 172);
+    margin: 20px 20px 20px 20px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .flex {
+    display: flex;
+  }
+  
+  .jc-center {
+    justify-content: center;
+  }
+  
+  .addBtn:hover {
+    background-color: #bbb;
+  }
+
+  .modal {
+    display: none;
+    z-index: 1;
+    position: fixed;
+    top: 150px;
+    left: 150px;
+    background-color: #f0ecec;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+
+  .doneTasks {
+    overflow-y: auto;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 40%;
+    height: 40%;
+    font-size: 0.8rem;
+    text-align: left;
+    justify-content: left;
+    padding-left: 10px;
+}
+
+.completion-date {
+    color: #b16464;
+}
